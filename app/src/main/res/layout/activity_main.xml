@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/loginEmailAdressInput"
+        android:id="@+id/loginEmailAddressInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -41,10 +41,10 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmailAdressInput" />
+        app:layout_constraintTop_toBottomOf="@+id/loginEmailAddressInput" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -61,7 +61,7 @@
         android:layout_marginTop="16dp"
         android:text="Forgot Password?"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
     <TextView
         android:id="@+id/loginRegisterText"
@@ -71,7 +71,7 @@
         android:layout_marginTop="16dp"
         android:text="Register"
         app:layout_constraintStart_toEndOf="@+id/loginForgotPasswordText"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
     <ProgressBar
         android:id="@+id/loginProgressBar"
