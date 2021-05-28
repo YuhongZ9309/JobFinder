@@ -8,11 +8,22 @@ package com.example.jobfinder;
     import androidx.annotation.NonNull;
     import androidx.annotation.Nullable;
     import androidx.fragment.app.Fragment;
+    import androidx.recyclerview.widget.RecyclerView;
 
 public class HomeFragment extends Fragment {
+
+    private RecyclerView listing;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_home, container, false);
+
+        //listing = getView().findViewById(R.id.jobList);
+
+
+
+
+
     }
 }
