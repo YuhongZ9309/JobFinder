@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
     {
         super.onStart();
 
-        FirebaseRecyclerAdapter<>
+        FirebaseRecyclerOptions<>
 
 
     }
