@@ -18,9 +18,9 @@ public class ListViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         super(itemView);
 
 
-        imageView = (ImageView) itemView.findViewById(R.id.post_image);
-        txtTitle = (TextView) itemView.findViewById(R.id.post_name);
-        txtText = (TextView) itemView.findViewById(R.id.post_text);
+//        imageView = (ImageView) itemView.findViewById(R.id.post_image);
+//        txtTitle = (TextView) itemView.findViewById(R.id.post_name);
+//        txtText = (TextView) itemView.findViewById(R.id.post_text);
     }
 
     public void setItemClickListener(ItemClickListener listener)

@@ -11,31 +11,74 @@ package com.example.jobfinder;
     import androidx.annotation.NonNull;
     import androidx.annotation.Nullable;
     import androidx.fragment.app.Fragment;
+    import androidx.recyclerview.widget.LinearLayoutManager;
     import androidx.recyclerview.widget.RecyclerView;
 
-    import com.firebase.ui.database.FirebaseRecyclerAdapter;
+    import com.google.firebase.database.DataSnapshot;
+    import com.google.firebase.database.DatabaseError;
+    import com.google.firebase.database.DatabaseReference;
+    import com.google.firebase.database.FirebaseDatabase;
+    import com.google.firebase.database.ValueEventListener;
+
+    import java.util.ArrayList;
+
+// import com.firebase.ui.database.FirebaseRecyclerAdapter;
 
 public class HomeFragment extends Fragment {
 
-    private RecyclerView listing;
+    RecyclerView listing;
+    DatabaseReference database;
+    MyAdapter myAdapter;
+    ArrayList<User> list;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
 
-        //listing = getView().findViewById(R.id.jobList);
+        listing = v.findViewById(R.id.jobList);
+        database = FirebaseDatabase.getInstance().getReference("Jobs");
+        listing.setHasFixedSize(true);
+        listing.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        list = new ArrayList<>();
+        myAdapter = new MyAdapter(getActivity(), list);
+        listing.setAdapter(myAdapter);
+
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    User user = dataSnapshot.getValue(User.class);
+                    list.add(user);
+                }
+                myAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+        return v ;
+
+        
 
     }
 
-    @Override
-    public void onStart()
-    {
-        super.onStart();
+//    @Override
+//    public void onStart()
+//    {
+//        super.onStart();
+//
+//        FirebaseRecyclerAdapter<>
+//
+//
+//    }
 
-        FirebaseRecyclerAdapter<>
-
-
-    }
 }
 

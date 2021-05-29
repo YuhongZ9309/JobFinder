@@ -5,10 +5,20 @@
     android:background="@android:color/holo_blue_bright">
 
     <TextView
+        android:id="@+id/profileFragTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile Fragments"
-        android:textSize="30sp"
-        android:layout_centerInParent="true" />
+        android:text="Profile"
+        />
+    <Button
+        android:id="@+id/logOutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:text="Log Out"
+        android:textSize="30sp" />
+
 
 </RelativeLayout>

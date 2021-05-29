@@ -13,4 +13,12 @@ public class User {
         email = e;
     }
 
+    public String getFullName () {
+        return fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
 }
