@@ -14,18 +14,25 @@
         android:id="@+id/createJobTitleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="50dp"
         android:text="Title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <EditText
+
+
         android:id="@+id/createJobTitleEditText"
         android:layout_width="332dp"
         android:layout_height="59dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Title"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createJobTitleLabel" />
 
@@ -33,7 +40,11 @@
         android:id="@+id/createJobPriceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="Price $"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createJobTitleEditText" />
 
@@ -41,9 +52,12 @@
         android:id="@+id/createJobPriceEditText"
         android:layout_width="332dp"
         android:layout_height="59dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Price"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createJobPriceLabel" />
 
@@ -51,7 +65,11 @@
         android:id="@+id/createJobDescriptionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="Description"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createJobPriceEditText" />
 
@@ -60,10 +78,14 @@
         android:layout_width="332dp"
         android:layout_height="59dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/createJobPostButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createJobDescriptionLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/createJobDescriptionLabel"
+        app:layout_constraintVertical_bias="0.151" />
 
     <Button
         android:id="@+id/createJobPostButton"

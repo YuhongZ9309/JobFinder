@@ -2,19 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_bright">
+    android:background="@color/white">
 
-    <TextView
-        android:id="@+id/profileFragTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="48sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        />
+    <include
+        android:id="@+id/include"
+        layout="@layout/profile_toolbar"></include>
+
+<!--    <TextView-->
+<!--        android:id="@+id/profileFragTitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Profile"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="48sp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        />-->
 
     <Button
         android:id="@+id/logOutButton"
@@ -27,29 +31,43 @@
         android:textSize="30sp" />
 
     <LinearLayout
+        android:layout_centerHorizontal="true"
         android:id="@+id/profileFragNameSection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/profileFragTitle">
+        android:layout_below="@+id/profileFragTitle"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="40dp"
+
+
+
+        >
+
+
         <TextView
             android:id="@+id/profileFragUsernameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Username: "
+            android:textSize="25sp"
             android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/profileFragFullName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Example"
+            android:textSize="25sp"
             android:textColor="@color/black" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profileFragNameSection">
         <TextView
+            android:textSize="25sp"
             android:id="@+id/profileFragEmailLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +76,7 @@
             android:text="Email: " />
 
         <TextView
+            android:textSize="25sp"
             android:id="@+id/profileFragEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
