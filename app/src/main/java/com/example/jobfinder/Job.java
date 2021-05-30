@@ -4,6 +4,9 @@ public class Job {
 
     public String jobName, jobEmail, jobTitle, jobDescription, jobPrice;
 
+    public Job () {
+
+    }
 
     public Job(String jobName, String jobEmail, String jobTitle, String jobPrice, String jobDescription) {
         this.jobName = jobName;

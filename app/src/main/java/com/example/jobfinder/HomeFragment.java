@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
     RecyclerView listing;
     DatabaseReference database;
     MyAdapter myAdapter;
-    ArrayList<User> list;
+    ArrayList<Job> list;
 
     @Nullable
     @Override
@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         listing = v.findViewById(R.id.jobList);
-        database = FirebaseDatabase.getInstance().getReference("Users");
+        database = FirebaseDatabase.getInstance().getReference("Jobs");
         listing.setHasFixedSize(true);
         listing.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -53,8 +53,8 @@ public class HomeFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    User user = dataSnapshot.getValue(User.class);
-                    list.add(user);
+                    Job job = dataSnapshot.getValue(Job.class);
+                    list.add(job);
                 }
                 myAdapter.notifyDataSetChanged();
             }

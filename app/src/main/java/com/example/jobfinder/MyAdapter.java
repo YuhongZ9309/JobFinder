@@ -16,9 +16,9 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     Context context;
-    ArrayList<User> list;
+    ArrayList<Job> list;
 
-    public MyAdapter(Context context, ArrayList<User> list) {
+    public MyAdapter(Context context, ArrayList<Job> list) {
         this.context = context;
         this.list = list;
     }
@@ -33,9 +33,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        User user = list.get(position);
-        holder.fullName1.setText(user.getFullName());
-        holder.email1.setText(user.getEmail());
+        Job job = list.get(position);
+        holder.jobTitle.setText(job.getJobTitle());
+        holder.jobUsername.setText(job.getJobName());
+        holder.jobPrice.setText(job.getJobPrice());
 
     }
 
@@ -46,13 +47,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView fullName1, email1;
+        TextView jobTitle, jobUsername, jobPrice;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            fullName1 = itemView.findViewById(R.id.jobName);
-            email1 = itemView.findViewById(R.id.jobDescription);
+            jobTitle = itemView.findViewById(R.id.jobTitle);
+            jobUsername = itemView.findViewById(R.id.jobName);
+            jobPrice = itemView.findViewById(R.id.jobPrice);
 
         }
     }
