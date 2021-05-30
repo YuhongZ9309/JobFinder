@@ -33,7 +33,7 @@
         android:id="@+id/createJobPriceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price"
+        android:text="Price $"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createJobTitleEditText" />
 
@@ -42,7 +42,7 @@
         android:layout_width="332dp"
         android:layout_height="59dp"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         android:hint="Price"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createJobPriceLabel" />

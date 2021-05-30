@@ -35,9 +35,11 @@ public class Home extends AppCompatActivity {
                     switch (item.getItemId()) {
                         case R.id.nav_home:
                             selectedFragment = new HomeFragment();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                             break;
                         case R.id.nav_profile:
                             selectedFragment = new ProfileFragment();
+                            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
                             break;
                         case R.id.nav_create:
                             //selectedFragment = new MapFragment();
@@ -45,7 +47,7 @@ public class Home extends AppCompatActivity {
                             break;
                     }
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
                     return true;
                 }
             };
