@@ -83,8 +83,6 @@ public class CreateJobListing extends AppCompatActivity {
                 reference = FirebaseDatabase.getInstance().getReference("Users");
                 userID = user.getUid();
 
-//                final TextView fullNameTextView = v.findViewById(R.id.profileFragFullName);
-//                final TextView emailTextView = v.findViewById(R.id.profileFragEmail);
                 reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -112,7 +110,8 @@ public class CreateJobListing extends AppCompatActivity {
 
 
                 progressBar.setVisibility(View.GONE);
-                Toast.makeText(CreateJobListing.this, "JOb posted", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CreateJobListing.this, "Job successfully posted", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(CreateJobListing.this, Home.class));
             }
         });
 
