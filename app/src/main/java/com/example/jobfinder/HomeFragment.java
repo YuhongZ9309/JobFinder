@@ -1,5 +1,6 @@
 package com.example.jobfinder;
 
+    import android.content.Intent;
     import android.media.Image;
     import android.os.Bundle;
     import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ package com.example.jobfinder;
     import android.view.ViewGroup;
     import android.widget.ImageView;
     import android.widget.TextView;
+    import android.widget.Toast;
 
     import androidx.annotation.NonNull;
     import androidx.annotation.Nullable;
@@ -14,6 +16,7 @@ package com.example.jobfinder;
     import androidx.recyclerview.widget.LinearLayoutManager;
     import androidx.recyclerview.widget.RecyclerView;
 
+    import com.google.android.material.floatingactionbutton.FloatingActionButton;
     import com.google.firebase.database.DataSnapshot;
     import com.google.firebase.database.DatabaseError;
     import com.google.firebase.database.DatabaseReference;
@@ -37,7 +40,7 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         listing = v.findViewById(R.id.jobList);
-        database = FirebaseDatabase.getInstance().getReference("Jobs");
+        database = FirebaseDatabase.getInstance().getReference("Users");
         listing.setHasFixedSize(true);
         listing.setLayoutManager(new LinearLayoutManager(getActivity()));
 

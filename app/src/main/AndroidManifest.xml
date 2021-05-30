@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JobFinder">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".CreateJobListing"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".RegisterUser" />
         <activity android:name=".Home">
             <intent-filter>

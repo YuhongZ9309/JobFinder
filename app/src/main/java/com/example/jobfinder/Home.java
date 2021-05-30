@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,9 @@ public class Home extends AppCompatActivity {
                         case R.id.nav_profile:
                             selectedFragment = new ProfileFragment();
                             break;
-                        case R.id.nav_map:
-                            selectedFragment = new MapFragment();
+                        case R.id.nav_create:
+                            //selectedFragment = new MapFragment();
+                            startActivity(new Intent(Home.this, CreateJobListing.class));
                             break;
                     }
 
