@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=5A:09:D0:44:2E:68:08:EA:8D:3D:E1:0B:D5:F9:9C:68:3F:7C:6C:33%3Bcom.example.jobfinder
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.example.jobfinder
+
+    SHA-1 certificate fingerprint:
+    5A:09:D0:44:2E:68:08:EA:8D:3D:E1:0B:D5:F9:9C:68:3F:7C:6C:33
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB-EPaWUkeI_rPAr777ExNVSVOQ3tKmFTQ</string>
+</resources>
