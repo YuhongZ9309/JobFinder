@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
                 case R.id.loginForgotPasswordText:
-                    startActivity(new Intent(this, forgetPassword.class));
+                    startActivity(new Intent(this, ForgetPW.class));
                     break;
         }
     }
