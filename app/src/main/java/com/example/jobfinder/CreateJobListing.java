@@ -112,6 +112,7 @@ public class CreateJobListing extends AppCompatActivity {
                 progressBar.setVisibility(View.GONE);
                 Toast.makeText(CreateJobListing.this, "Job successfully posted", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(CreateJobListing.this, Home.class));
+               // getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             }
         });
 
